@@ -93,23 +93,6 @@ Soporta:
     • Evaluación de tipos en runtime (dinámica controlada)
     • Comparaciones numéricas convertidas a double
 
- Estructura del proyecto
-tp-interprete/
-│
-├── src/
-│   ├── main/java/
-│   │   ├── main/
-│   │   ├── parser/        (ANTLR generado)
-│   │   ├── semantic/
-│   │   ├── interpreter/
-│   │
-│   └── main/antlr4/
-│       └── MiniLang.g4
-│
-├── programa.txt
-├── pom.xml
-└── README.md
- 
  Compilación y ejecución
  Requisitos
     • Java 17
