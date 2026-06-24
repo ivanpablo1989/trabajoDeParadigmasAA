@@ -1,7 +1,7 @@
 README – Intérprete MiniLang (ANTLR4 + Java)
  Integrantes
-    • Integrante 1: Iván Tolaba
-    • Integrante 2: Santiago Agarzua
+    Integrante 1: Iván Tolaba
+    Integrante 2: Santiago Agarzua
     
 enlace a video de Iván Tolaba:
 enlace a video de Santiago Agarzua
@@ -15,19 +15,19 @@ repeat {
 
  Descripción del lenguaje
 MiniLang es un lenguaje de programación imperativo simple diseñado para ejecutar programas con:
-    • Tipos de datos básicos
-    • Variables
-    • Expresiones aritméticas, relacionales y lógicas
-    • Estructuras de control
-    • Impresión por consola
+     Tipos de datos básicos
+     Variables
+     Expresiones aritméticas, relacionales y lógicas
+     estructuras de control
+     Impresión por consola
 El lenguaje es interpretado utilizando ANTLR4 y Java.
 
  Características del lenguaje
  Tipos de datos
-    • int → enteros
-    • float → números decimales
-    • string → texto
-    • bool → booleanos (true, false)
+     int → enteros
+     float → números decimales
+     string → texto
+     bool → booleanos (true, false)
  Comentarios
 // comentario de una línea
  Variables
@@ -37,9 +37,9 @@ string s = "hola";
 bool x = true;
 
 Reglas:
-    • No se puede usar una variable sin declarar
-    • No se permite redeclaración
-    • Se valida compatibilidad de tipos
+    No se puede usar una variable sin declarar
+    No se permite redeclaración
+    Se valida compatibilidad de tipos
 
 Instrucción de salida
 print(a + b);
@@ -61,43 +61,43 @@ El sistema está dividido en 4 etapas:
 1 Análisis léxico (Lexer)
 Generado por ANTLR4.
 Responsable de:
-    • reconocer tokens
-    • palabras clave
-    • operadores
-    • literales
+    reconocer tokens
+     palabras clave
+     operadores
+     literales
 Análisis sintáctico (Parser)
 Generado por ANTLR4.
 Construye el árbol de derivación (Parse Tree) a partir de la gramática.
  Análisis semántico
 Implementado con Visitor.
 Valida:
-    • variables declaradas
-    • tipos compatibles
-    • asignaciones correctas
-    • divisiones por cero
-    • uso de variables no inicializadas
+     variables declaradas
+     tipos compatibles
+     asignaciones correctas
+     divisiones por cero
+     uso de variables no inicializadas
  Intérprete
 Recorre el árbol sintáctico y ejecuta el programa.
 
 Soporta:
-    • evaluación de expresiones
-    • control de flujo
-    • impresión por consola
-    • asignaciones dinámicas
+     evaluación de expresiones
+     control de flujo
+     impresión por consola
+     asignaciones dinámicas
  Decisiones de diseño
-    • Se utilizó Visitor Pattern para separar lógica del AST
-    • Se separó:
+     Se utilizó Visitor Pattern para separar lógica del AST
+     Se separó:
         ◦ SemanticAnalyzer (validación)
         ◦ Interpreter (ejecución)
-    • Se implementó tabla de símbolos con HashMap
-    • Evaluación de tipos en runtime (dinámica controlada)
-    • Comparaciones numéricas convertidas a double
+     Se implementó tabla de símbolos con HashMap
+     Evaluación de tipos en runtime (dinámica controlada)
+     Comparaciones numéricas convertidas a double
 
  Compilación y ejecución
  Requisitos
-    • Java 17
-    • Maven 3+
-    • ANTLR 4.13.1 (manejado por Maven)
+     Java 17
+     Maven 3+
+     ANTLR 4.13.1 (manejado por Maven)
  Compilar proyecto
 mvn clean install
  Ejecutar intérprete
