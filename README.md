@@ -2,14 +2,17 @@ README – Intérprete MiniLang (ANTLR4 + Java)
  Integrantes
     • Integrante 1: Iván Tolaba
     • Integrante 2: Santiago Agarzua
-enlace a video de Iván :Tolaba:
+    
+enlace a video de Iván Tolaba:
 enlace a video de Santiago Agarzua
+
  Variante asignada
 Variante 4: repeat-until
 Iteración con condición de corte invertida:
 repeat {
     instrucciones;
 } until (condición);
+
  Descripción del lenguaje
 MiniLang es un lenguaje de programación imperativo simple diseñado para ejecutar programas con:
     • Tipos de datos básicos
@@ -18,6 +21,7 @@ MiniLang es un lenguaje de programación imperativo simple diseñado para ejecut
     • Estructuras de control
     • Impresión por consola
 El lenguaje es interpretado utilizando ANTLR4 y Java.
+
  Características del lenguaje
  Tipos de datos
     • int → enteros
@@ -31,10 +35,12 @@ int a = 5;
 float b = 2.5;
 string s = "hola";
 bool x = true;
+
 Reglas:
     • No se puede usar una variable sin declarar
     • No se permite redeclaración
     • Se valida compatibilidad de tipos
+
 Instrucción de salida
 print(a + b);
 print("hola");
@@ -49,6 +55,7 @@ repeat {
     print(n);
     n = n + 1;
 } until (n == 5);
+ 
  Diseño técnico del intérprete
 El sistema está dividido en 4 etapas:
 1 Análisis léxico (Lexer)
@@ -71,6 +78,7 @@ Valida:
     • uso de variables no inicializadas
  Intérprete
 Recorre el árbol sintáctico y ejecuta el programa.
+
 Soporta:
     • evaluación de expresiones
     • control de flujo
@@ -84,6 +92,7 @@ Soporta:
     • Se implementó tabla de símbolos con HashMap
     • Evaluación de tipos en runtime (dinámica controlada)
     • Comparaciones numéricas convertidas a double
+
  Estructura del proyecto
 tp-interprete/
 │
@@ -100,6 +109,7 @@ tp-interprete/
 ├── programa.txt
 ├── pom.xml
 └── README.md
+ 
  Compilación y ejecución
  Requisitos
     • Java 17
